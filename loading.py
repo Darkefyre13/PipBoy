@@ -8,22 +8,7 @@ from tkinter.ttk import Progressbar
 
 
 root = Tk()
-root.configure(background='black')
 root.title('PipBoy3k')
-#root.geometry("800x480+50+50")
-root.attributes('-fullscreen', True)
-
-menu_bar = Menu(root)
-file_menu = Menu(menu_bar, tearoff=0)
-file_menu.add_command(label="Quit", command=root.destroy)
-
-exit_button = Button(root, command=root.destroy)
-exit_button.pack(side="bottom")
-
-class Loading(tk.Frame):
-    """docstring for loading."""
-    def __init__(self, arg):
-        progress=Progressbar(tk,length=100,mode='determinate')
 
 def bar():
     import time
@@ -39,6 +24,4 @@ def bar():
     progress['value']=100
     Loading.pack_forget()
 
-
-Loading.pack(Loading.tk)
 root.mainloop()
